@@ -48,8 +48,8 @@ class TestAmazon:
                 quantity = driver.find_element(By.ID, 'quantity').get_attribute('value')
                 assert quantity == '1'
 
-                """Recebe o valor do produto em string, transforma em float, e verifica se ele respeita o valora máximo de
-                R$300"""
+                """Recebe o valor do produto em string, transforma em float, e verifica se ele respeita o valora máximo 
+                de R$300"""
                 value = driver.find_element(By.XPATH, '//*[@id="corePrice_feature_div"]//span[2]').text
                 value = value.replace('R$', '')
                 value = value.replace('.', '')
@@ -86,9 +86,8 @@ class TestAmazon:
             total_value = total_value + all_values[i]
 
         """O valor final fornecido pela amazon é refatorado e salvo como float dentro de uma variável"""
-
-        WebDriverWait(driver, 2).until(
-        ec.visibility_of_element_located((By.XPATH, '//*[@id="sc-subtotal-amount-buybox"]/span')))
+        WebDriverWait(driver, 2).until(ec.visibility_of_element_located((By.XPATH,
+                                                                         '//*[@id="sc-subtotal-amount-buybox"]/span')))
         final_value = driver.find_element(By.XPATH, '//*[@id="sc-subtotal-amount-buybox"]/span').text
         final_value = final_value.replace('R$ ', '')
         final_value = final_value.replace('.', '')
