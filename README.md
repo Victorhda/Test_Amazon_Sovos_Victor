@@ -6,5 +6,5 @@ Para rodar o teste são necessários os seguintes programas, e para máxima comp
            https://chromedriver.storage.googleapis.com/index.html?path=96.0.4664.45/
     chrome - 96.0.4664.45
 
-Depois que tudo for instalado, basta acessar a pasta do projeto pelo CMD e executar através do comando:
+Depois que tudo for instalado, basta acessar o diretório do projeto pelo CMD e executar através do comando:
     python -m pytest
